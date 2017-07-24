@@ -19,6 +19,10 @@
 (defconst spacemacs-version          "0.200.9" "Spacemacs version.")
 (defconst spacemacs-emacs-min-version   "24.4" "Minimal version of Emacs.")
 
+;; call this to make sure that org-mode works properly:
+;; see https://github.com/syl20bnr/spacemacs/issues/8334
+(package-initialize)
+
 (if (not (version<= spacemacs-emacs-min-version emacs-version))
     (error (concat "Your version of Emacs (%s) is too old. "
                    "Spacemacs requires Emacs version %s or above.")
